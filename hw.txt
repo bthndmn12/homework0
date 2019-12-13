@@ -57,9 +57,9 @@ public class Second {
            int divider1 = output/10;
            int allsum = 0;
            int sum0 = divider0+divider1;
-               System.out.println(divider0+"+"+divider1+"="+(divider0+divider1));
+               //System.out.println(divider0+"+"+divider1+"="+(divider0+divider1));
            sum = sum + divider0 + divider1;
-               System.out.println("SUM1: "+sum);
+              // System.out.println("SUM1: "+sum);
                summary = sum +sum2;
                 }
         }
@@ -67,12 +67,12 @@ public class Second {
        for(int j = s.length()-1;j >= 5;j -= 2){
            char o = s.charAt(j);
            int output = (((c.length()+o)-48));
-           System.out.print(output+" ");
+           //System.out.print(output+" ");
             sum2 += output;
             }
-            System.out.println("SUM2: "+sum2);
+            //System.out.println("SUM2: "+sum2);
             summary = sum + sum2;
-            System.out.println(summary);}
+            //System.out.println(summary);}
     if((sum + sum2)%10 == 0){
                 System.out.println("The account number "+s+" is valid.");
                 }
@@ -81,5 +81,5 @@ public class Second {
             }
         }
  }
-
+}
  
