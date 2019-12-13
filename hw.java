@@ -20,10 +20,12 @@ public class Second {
      boolean smallerthanzero = true;
      if(s.length()!=16){
          System.out.println("You enter an invalid number.You have to enter a 16 digits.");
+         System.exit(0);
      }else{    
      if(s.charAt(0) >= s.charAt(1)){
         System.out.println("You enter an invalid number.(Error:2)");
         firsttwocharacter = false;
+        System.exit(0);
      }else if(s.charAt(0) < s.charAt(1)){
          firsttwocharacter = true;
      }
@@ -43,18 +45,20 @@ public class Second {
    else{
        System.out.println("You enter an invalid number.(Error:3)"); 
        prime = false;
+       System.exit(0);
    }
    }
      if(prime){
         String c ="";
         
-    for(int i = 4;i < s.length();i += 2){
+        for(int i = 4;i < s.length();i += 2){
            char p = s.charAt(i);
            smallerthanzero = ((c.length()+p-48)*2) < 10;   
             if(smallerthanzero == false || smallerthanzero == true){
            int output = (((c.length()+p)-48)*2);
            int divider0 = output%10;
            int divider1 = output/10;
+           int allsum = 0;
            int sum0 = divider0+divider1;
                //System.out.println(divider0+"+"+divider1+"="+(divider0+divider1));
            sum = sum + divider0 + divider1;
@@ -72,13 +76,13 @@ public class Second {
             //System.out.println("SUM2: "+sum2);
             summary = sum + sum2;
             //System.out.println(summary);}
-   if((sum + sum2)%10 == 0){
+    if((sum + sum2)%10 == 0){
                 System.out.println("The account number "+s+" is valid.");
-                
-    else{
-                System.out.println("The account number "+s+" is invalid.");
+                }
+            else{
+                 System.out.println("The account number "+s+" is invalid.");
+            }
         }
-                           }
  }
 }
  
